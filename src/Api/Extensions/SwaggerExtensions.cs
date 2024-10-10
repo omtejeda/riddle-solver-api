@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.OpenApi.Models;
+using RiddleSolver.Api.Constants;
 
 namespace RiddleSolver.Api.Extensions;
 
@@ -9,6 +11,15 @@ public static class SwaggerExtensions
         services.AddSwaggerGen(c =>
         {
             c.EnableAnnotations();
+            c.SwaggerDoc(nameof(ApiVersions.v1), new OpenApiInfo
+            {
+                Title = "Riddle Solver REST API",
+                Contact = new OpenApiContact 
+                { 
+                    Name = "omtejeda",
+                    Url = new("https://github.com/omtejeda")
+                }
+            });
         });
         return services;
     }
