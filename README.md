@@ -94,24 +94,44 @@ The API can return the following responses:
 
 
 ## Installation
-To run the RiddleSolver project, ensure you have the .NET 8 SDK installed on your machine.
+You can run the RiddleSolver project using either the .NET 8 SDK or Docker. Follow the steps below for your preferred setup.
 
-1. Clone the repository:
+
+### Prerequisites
+Ensure you have either the .NET 8 SDK installed or Docker installed on your machine.
+
+### Clone the Repository
+First, clone the project repository:
 ```bash
 git clone https://github.com/omtejeda/riddle-solver-api.git
 ```
 
-
-2. Navigate to the project directory:
+### Navigate to project directory
 ```bash
 cd riddle-solver-api
 ```
 
-3. Run the project
+### Running with .NET SDK
+
+1. Run the project:
 ```bash
 dotnet run --project src/Api
 ```
 
+### Running with Docker
+
+1. Build the Docker image:
+```bash
+docker build -t riddle-solver-api:1.0 .
+```
+
+2. Run the Docker container:
+```bash
+docker run -dp 5045:8080 --name riddle-solver-api riddle-solver-api:1.0
+```
+
+### Accessing the API
+Once the steps above are completed, open your browser and go to http://localhost:5045 to access the API documentation via Swagger.
 
 ## License
 
