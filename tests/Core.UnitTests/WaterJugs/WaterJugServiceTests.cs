@@ -1,4 +1,3 @@
-using RiddleSolver.Core.Contracts;
 using RiddleSolver.Core.Features.WaterJugs.Services;
 using RiddleSolver.Core.Features.WaterJugs.Models;
 
@@ -6,7 +5,7 @@ namespace RiddleSolver.Core.UnitTests.WaterJugs;
 
 public class WaterJugServiceTests
 {
-    private readonly IWaterJugService _waterJugService;
+    private readonly WaterJugService _waterJugService;
 
     public WaterJugServiceTests()
     {
