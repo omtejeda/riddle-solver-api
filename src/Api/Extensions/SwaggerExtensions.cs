@@ -32,9 +32,9 @@ public static class SwaggerExtensions
         app.UseSwaggerUI(c =>
         {
             c.RoutePrefix = string.Empty;
-            foreach (var description in provider.ApiVersionDescriptions)
+            foreach (var groupName in provider.ApiVersionDescriptions.Select(x => x.GroupName))
             {
-                c.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+                c.SwaggerEndpoint($"/swagger/{groupName}/swagger.json", groupName.ToUpperInvariant());
             }
         });
         
