@@ -14,6 +14,7 @@ builder.Services.AddApi();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
+app.UseExceptionHandler(opts => {});
 app.UseApiSwagger();
 app.UseHttpsRedirection();
 app.UseRouting();
