@@ -46,7 +46,7 @@ The API can return the following responses:
 {
   "success": true,
   "status": "Success",
-  "message": "SOLVED",
+  "message": "Solved",
   "data": {
     "solution": [
       {
@@ -81,7 +81,7 @@ The API can return the following responses:
 {
   "success": false,
   "status": "Unprocessable",
-  "message": "No solution was found",
+  "message": "No Solution",
   "data": null
 }
 ```

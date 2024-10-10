@@ -10,7 +10,7 @@ namespace RiddleSolver.Core.Features.WaterJugs.Services;
 
 internal class WaterJugService : IWaterJugService
 {
-    private const string SolvedMessage = "SOLVED";
+    private const string SolvedMessage = "Solved";
     
     public bool CanBeMeasured(WaterJug waterJug)
     {
@@ -63,7 +63,7 @@ internal class WaterJugService : IWaterJugService
     }
 
     private static Result<WaterJugResponseDto> NoSolutionResult()
-        => Result<WaterJugResponseDto>.Failed(Status.Unprocessable, "No solution was found");
+        => Result<WaterJugResponseDto>.Failed(Status.Unprocessable, "No Solution");
 
     private static void RecordStepTaken(Dictionary<(int, int), List<StepTaken>> path, JugState jugState, int currentJug1, int currentJug2)
     {
@@ -100,6 +100,6 @@ internal class WaterJugService : IWaterJugService
             lastStep.Step,
             lastStep.BucketX,
             lastStep.BucketY,
-            $"{lastStep.Action}. {SolvedMessage}");
+            $"{lastStep.Action}. {SolvedMessage.ToUpper()}");
     }
 }

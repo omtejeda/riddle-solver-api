@@ -32,7 +32,7 @@ public class WaterJugServiceTests
         var actual = _waterJugService.Solve(waterJug);
 
         Assert.False(actual.Success);
-        Assert.Equal("No solution was found", actual.Message, StringComparer.OrdinalIgnoreCase);
+        Assert.Equal("No Solution", actual.Message, StringComparer.OrdinalIgnoreCase);
         Assert.Null(actual.Data?.Solution);
     }
 
