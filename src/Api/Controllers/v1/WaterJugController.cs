@@ -20,6 +20,7 @@ public class WaterJugController(ISender sender) : ControllerBase
     [SwaggerOperation("Solve water jug riddle")]
     [ProducesResponseType(typeof(Result<WaterJugResponseDto>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(Result<INoDataResponse>), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(Result<INoDataResponse>), StatusCodes.Status422UnprocessableEntity)]
     [HttpPost]
     public async Task<IActionResult> Solve([FromBody] SolveWaterJugCommand request)
     {
