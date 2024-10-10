@@ -10,7 +10,7 @@ The architecture consists of three layers, which helps to organize the codebase 
 
 ## Algorithmic Approach
 
-To solve the **Water Jug Problem**, we use the **Breadth-First Search** (BFS) algorithm. The process begins with both jugs empty and explores possible actions-such as filling, emptying, and pouring—level by level. The goal is to find a state where one of the jugs contains the desired amount of water.
+In order to tackle the **Water Jug Problem**, the **Breadth-First Search** (BFS) algorithm was used. The process begins with both jugs empty and explores possible actions-such as filling, emptying, and pouring—level by level. The goal is to find a state where one of the jugs contains the desired amount of water.
 
 The algorithm tracks the steps taken, providing a clear record of actions and the state of each jug throughout the solution process.
 
