@@ -94,7 +94,7 @@ internal class WaterJugService : IWaterJugService
         if (solutionSteps.Count == 0)
             return;
 
-        var lastStep = solutionSteps.Last();
+        var lastStep = solutionSteps[^1];
 
         solutionSteps[^1] = new StepTaken(
             lastStep.Step,
