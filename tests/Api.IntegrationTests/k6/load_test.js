@@ -7,7 +7,8 @@ export const options = {
 };
 
 export default function () {
-    const url = 'http://host.docker.internal:5045/api/v1/riddles/waterjug';
+    const host = 'http://host.docker.internal:5045'; // if running k6 in docker, use localhost otherwise.
+    const url = `${host}/api/v1/riddles/waterjug`;
     const payload = payloads[Math.floor(Math.random() * payloads.length)];
 
     const params = {
